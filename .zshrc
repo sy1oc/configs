@@ -22,7 +22,8 @@ bindkey -s -M vicmd 'E' '10e'
 bindkey -s -M vicmd 'I' '10i'
 bindkey -s -M vicmd 'O' '10o'
 bindkey -M vicmd 'j' vi-repeat-search
-bindkey -s -M vicmd  'h' 'i'
+bindkey -M vicmd 'h' vi-insert
+bindkey -M viins 'h' vi-insert
 bindkey -M vicmd 'k' vi-forward-word-end
 bindkey -M vicmd 'l' vi-open-line-below
 bindkey -M vicmd 'J' vi-rev-repeat-search
