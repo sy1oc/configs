@@ -30,6 +30,10 @@ function 10n() { local count=10; while (( count-- > 0 )); do zle vi-backward-cha
 function 10e() { local count=10; while (( count-- > 0 )); do zle down-line-or-history   ;done }
 function 10i() { local count=10; while (( count-- > 0 )); do zle up-line-or-history     ;done }
 function 10o() { local count=10; while (( count-- > 0 )); do zle vi-forward-char        ;done }
+function gl() {
+    (cd ~/clouds/ && git log --graph --oneline --decorate --color > git.log)
+    cat ~/clouds/git.log
+}
 function px() {
     s systemctl start clash
     export http_proxy=http://127.0.0.1:7890

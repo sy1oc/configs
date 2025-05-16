@@ -18,7 +18,7 @@ Tips2: Download packages **NOT** with nvidia version since it would install *nvi
 
 ## git.log
 
-Run this line refreshing my git.log
+Run `gl` to update this file. It is equivalent to run
 ```
 git log --graph --oneline > git.log
 ```
