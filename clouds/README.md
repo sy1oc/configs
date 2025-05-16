@@ -22,3 +22,10 @@ Run this line refreshing my git.log
 ```
 git log --graph --oneline > git.log
 ```
+My commit rules
+- + add
+- - delete
+- = fix
+- example: `=typo[.zshrc](pormpt)` after the symbol there is a abstract followed by [] and ()
+- [] includes file
+- () includes content
