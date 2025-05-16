@@ -30,26 +30,31 @@ function 10n() { local count=10; while (( count-- > 0 )); do zle vi-backward-cha
 function 10e() { local count=10; while (( count-- > 0 )); do zle down-line-or-history   ;done }
 function 10i() { local count=10; while (( count-- > 0 )); do zle up-line-or-history     ;done }
 function 10o() { local count=10; while (( count-- > 0 )); do zle vi-forward-char        ;done }
+# gl: git log
 function gl() {
     (cd ~/clouds/ && git log --graph --oneline --decorate --color > git.log)
     cat ~/clouds/git.log
 }
+# px: proxy
 function px() {
     s systemctl start clash
     export http_proxy=http://127.0.0.1:7890
     export https_proxy=https://127.0.0.1:7890
     echo -e "proxy on"
 }
+# dpx: de-proxy
 function dpx() {
     s systemctl stop clash
     unset http_proxy https_proxy
     echo -e "proxy off"
 }
+# asd: the left most 3 key in the mid keyboard row under qwerty layout
 function asd() {
     setxkbmap us -v colemak && xset r 66
     xinput --set-prop 11 327 0
     xinput --set-prop 11 330 0 1 0
 }
+# wp: wallpaper
 function wp() {
     feh --bg-max --randomize ~/.wallpapers/* &
 }
