@@ -35,9 +35,9 @@ function push_system() {
 }
 # gl: git log
 function gl() {
-    (cd ~/clouds/ && git log --graph --oneline --decorate --color > git.log)
+    (cd && git log --graph --oneline --decorate --color > .git.log)
     echo ""
-    cat ~/clouds/git.log
+    cat .git.log
 }
 # px: proxy
 function px() {
