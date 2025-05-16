@@ -33,6 +33,7 @@ function 10o() { local count=10; while (( count-- > 0 )); do zle vi-forward-char
 # gl: git log
 function gl() {
     (cd ~/clouds/ && git log --graph --oneline --decorate --color > git.log)
+    echo ""
     cat ~/clouds/git.log
 }
 # px: proxy
