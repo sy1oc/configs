@@ -21,7 +21,7 @@ zstyle ':vcs_info:git:*' formats '%b'
 setopt PROMPT_SUBST
 prompt='
 %B%F{cyan}%n%f @ %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f 
-[%F{cyan}%m%f] <<b '
+[%F{cyan}%m%f] <<%b '
 
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
