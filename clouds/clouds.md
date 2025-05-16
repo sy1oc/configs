@@ -23,8 +23,8 @@ Run `gl` to update this file. It is equivalent to run
 git log --graph --oneline > git.log
 ```
 My commit rules
-- + add
-- - delete
+- \+ add
+- \- delete
 - = fix
 - example: `=typo[.zshrc](pormpt)` after the symbol there is a abstract followed by [] and ()
 - [] includes file
