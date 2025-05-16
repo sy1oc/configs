@@ -1,5 +1,7 @@
-* [33ma0578ab[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmut[m[33m)[m +[.zshrc](system_push)
-* [33m12efab3[m[33m ([m[1;31mgitee/sol[m[33m, [m[1;31mgitee/HEAD[m[33m, [m[1;32msol[m[33m)[m +[.gitconfig];=[.zshrc]
+* [33ma605c8c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmut[m[33m)[m =bugs
+* [33mfc1abbf[m[33m ([m[1;31mgitee/sol[m[33m, [m[1;31mgitee/HEAD[m[33m, [m[1;32msol[m[33m)[m =[.zshrc](rename & test new function)
+* [33ma0578ab[m +[.zshrc](system_push)
+* [33m12efab3[m +[.gitconfig];=[.zshrc]
 * [33m71fe085[m +comments[.zshrc]
 * [33m3dd9693[m +cmd[.zshrc](gl)
 * [33m82ac5b5[m =tags(dwm)
