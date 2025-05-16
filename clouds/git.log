@@ -1,0 +1,8 @@
+*   cd58d48 Merge branch 'zsh_vim' into mut
+|\  
+| * 2736d60  zsh vi-mode :)
+* | 4276c8a Revert " zsh-vim-mode :("
+* | cfba16d  zsh-vim-mode :(
+|/  
+* 185221f config.def.
+* e81b8d6 first commit

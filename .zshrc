@@ -3,18 +3,17 @@ HISTSIZE=1000
 SAVEHIST=1000
 unsetopt beep
 bindkey -v
-export KEYTIMEOUT=.1
-export ZVM=KEYTIMEOUT=1
 zstyle :compinstall filename '/home/sy1oc/.zshrc'
 autoload -Uz compinit
 compinit
+autoload edit-command-line
 
 export PATH="/home/sy1oc/.cargo/bin:$PATH"
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 export EDITOR=nvim
-export ZVM_VI_EDITOR=nvim
+export KEYTIMEOUT=.1
 
 autoload -Uz vcs_info
 precmd() { vcs_info }
@@ -22,7 +21,7 @@ zstyle ':vcs_info:git:*' formats '%b'
 setopt PROMPT_SUBST
 prompt='
 %B%F{cyan}%n%f @ %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f 
-[%F{cyan}%m%f] <<%b '
+[%F{cyan}%m%f] <<b '
 
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -84,6 +83,7 @@ zle -N vi-delete vi-operator-swapped
 zle -N vi-yank vi-operator-swapped
 zle -N zle-line-init
 zle -N zle-keymap-select
+zle -N edit-command-line
 
 bindkey -M vicmd 'n' vi-backward-char
 bindkey -M vicmd 'e' down-line-or-history
@@ -102,6 +102,7 @@ bindkey -M vicmd 'H' vi-insert-bol
 bindkey -M vicmd 'K' vi-forward-blank-word-end
 bindkey -M vicmd 'L' vi-open-line-above
 bindkey -M vicmd 'c' vi-change
+bindkey -M vicmd 'q' edit-command-line
 
 alias l='ls --color=auto '
 alias ll='l -al '
@@ -111,4 +112,3 @@ alias v='nvim'
 alias shut='shutdown now'
 alias s='sudo '
 alias nf='neofetch'
-
