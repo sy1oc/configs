@@ -29,7 +29,7 @@ static const char col_cyan[]        = "#89B4FA";    // catppuccin blue
 
 - tagging
 ```c
-static const char *tags[] = { "||]", "|][", "|]|", "|]]", "][[", "][|", "][]", "]|[", "]||" };
+static const char *tags[] = { "[", "][", "|[", "[[", "]][", "|][", "[][", "]|[", "||[" };
 ```
 
 - layout
