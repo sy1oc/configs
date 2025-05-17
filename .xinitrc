@@ -8,6 +8,9 @@ xinput --set-prop 10 328 0 1 0
 pactl set-default-sink alsa_output.pci-0000_0c_00.6.analog-stereo
 pactl set-default-source alsa_input.pci-0000_0c_00.6.analog-stereo
 
+export http_proxy=http://127.0.0.1:7890
+export https_proxy=https://127.0.0.1:7890
+
 while xsetroot -name " `timedatectl | awk 'NR == 3 {
     print $4, $3, $5
 }'` "
