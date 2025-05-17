@@ -14,7 +14,8 @@
 !.zshrc
 
 !.config/
-!.config/picom.conf
+!.config/picom/
+!.config/picom/**
 !.config/nvim/
 !.config/nvim/**
 !.config/zsh/
