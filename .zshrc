@@ -8,7 +8,7 @@ autoload -Uz compinit
 compinit
 autoload edit-command-line
 
-export PATH="/home/sy1oc/.cargo/bin:$PATH"
+export PATH="/home/sy1oc/hmcl:/home/sy1oc/.cargo/bin:$PATH"
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
@@ -59,6 +59,7 @@ function asd() {
     xinput --set-prop 10 328 0 1 0
     pactl set-default-sink alsa_output.pci-0000_0c_00.6.analog-stereo
     pactl set-default-source alsa_input.pci-0000_0c_00.6.analog-stereo
+    dmenu_path > /dev/null
 }
 # wp: wallpaper
 function wp() {
