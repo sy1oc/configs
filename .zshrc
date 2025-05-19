@@ -30,12 +30,6 @@ function 10n() { local count=10; while (( count-- > 0 )); do zle vi-backward-cha
 function 10e() { local count=10; while (( count-- > 0 )); do zle down-line-or-history   ;done }
 function 10i() { local count=10; while (( count-- > 0 )); do zle up-line-or-history     ;done }
 function 10o() { local count=10; while (( count-- > 0 )); do zle vi-forward-char        ;done }
-function pipes() {
-    pipes.sh -t $(( RANDOM % 10 ))
-}
-function bonsai() {
-    cbonsai -l
-}
 function push_system() {
     (cd && git switch sol && git pull && git merge mut && git push -u gitee sol && git push -u github sol && git switch mut)
 }
@@ -130,4 +124,4 @@ alias pm='pacman'
 alias v='nvim'
 alias shut='shutdown now'
 alias s='sudo '
-alias f='fastfetch'
+alias ff='fastfetch'

@@ -36,11 +36,11 @@ static const char *tags[] = { "[", "][", "|[", "[[", "]][", "|][", "[][", "]|[",
 ```c
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[T]",      centeredmaster },
-	{ "[F]",      centeredfloatingmaster },
-	{ "[T]",      tile },    /* first entry is default */
-	{ "[F]",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ "T",      centeredmaster },
+	{ "F",      centeredfloatingmaster },
+	{ "T",      tile },    /* first entry is default */
+	{ "F",      NULL },    /* no layout function means floating behavior */
+	{ "M",      monocle },
 };
 ```
 
