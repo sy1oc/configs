@@ -90,7 +90,7 @@ static const Key keys[] = {
 
 - [alpha](https://st.suckless.org/patches/alpha/)
 ```c
-float alpha = .618;
+float alpha = .5;
 ```
 
 - font 

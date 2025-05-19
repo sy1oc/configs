@@ -30,6 +30,12 @@ function 10n() { local count=10; while (( count-- > 0 )); do zle vi-backward-cha
 function 10e() { local count=10; while (( count-- > 0 )); do zle down-line-or-history   ;done }
 function 10i() { local count=10; while (( count-- > 0 )); do zle up-line-or-history     ;done }
 function 10o() { local count=10; while (( count-- > 0 )); do zle vi-forward-char        ;done }
+function pipes() {
+    pipes.sh -t $(( RANDOM % 10 ))
+}
+function bonsai() {
+    cbonsai -l
+}
 function push_system() {
     (cd && git switch sol && git pull && git merge mut && git push -u gitee sol && git push -u github sol && git switch mut)
 }
@@ -41,14 +47,14 @@ function gl() {
 }
 # px: proxy
 function px() {
-    s systemctl start clash
+    sudo systemctl start clash
     export http_proxy=http://127.0.0.1:7890
     export https_proxy=https://127.0.0.1:7890
     echo -e "proxy on"
 }
 # dpx: de-proxy
 function dpx() {
-    s systemctl stop clash
+    sudo systemctl stop clash
     unset http_proxy https_proxy
     echo -e "proxy off"
 }
@@ -77,14 +83,14 @@ function zle-keymap-select {
     fi
 }
 function vi-operator-swapped {
-  local key
-  read -k key
-  case $key in
-    h) key="i" ;;
-    i) key="h" ;;
-  esac
-  zle -U "$key"
-  zle ".$WIDGET"
+    local key
+    read -k key
+    case $key in
+        h) key="i" ;;
+        i) key="h" ;;
+    esac
+    zle -U "$key"
+    zle ".$WIDGET"
 }
 
 zle -N 10n
@@ -124,4 +130,4 @@ alias pm='pacman'
 alias v='nvim'
 alias shut='shutdown now'
 alias s='sudo '
-alias nf='neofetch'
+alias f='fastfetch'

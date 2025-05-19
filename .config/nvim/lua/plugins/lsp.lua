@@ -1,4 +1,6 @@
 return {
+    "mason-org/mason.nvim",
+    "mason-org/mason-lspconfig.nvim",
 	{
 		"neovim/nvim-lspconfig", -- REQUIRED: for native Neovim LSP integration
 		lazy = false, -- REQUIRED: tell lazy.nvim to start this plugin at startup
@@ -37,12 +39,15 @@ return {
 		end,
 		config = function()
 			vim.diagnostic.config({ virtual_text = true })
-			local lsp = require("lspconfig")
 			local coq = require("coq")
-			lsp.rust_analyzer.setup(coq.lsp_ensure_capabilities())
-			lsp.lua_ls.setup(coq.lsp_ensure_capabilities())
-			lsp.clangd.setup(coq.lsp_ensure_capabilities())
-			lsp.texlab.setup(coq.lsp_ensure_capabilities())
+            vim.lsp.config('rust_analyzer', coq.lsp_ensure_capabilities())
+            vim.lsp.config('lua_ls'       , coq.lsp_ensure_capabilities())
+            vim.lsp.config('clangd'       , coq.lsp_ensure_capabilities())
+            vim.lsp.config('texlab'       , coq.lsp_ensure_capabilities())
+            vim.lsp.enable('rust_analyzer')
+            vim.lsp.enable('lua_ls'       )
+            vim.lsp.enable('clangd'       )
+            vim.lsp.enable('texlab'       )
 		end,
 	},
 }

@@ -34,13 +34,6 @@ return {
 		event = "InsertEnter",
 		opts = {},
 	},
-	{ "mason-org/mason.nvim" },
-	-- { "williamboman/mason-lspconfig.nvim" },
-	-- {
-	-- 	"stevearc/conform.nvim",
-	-- 	opts = {},
-	-- },
-	-- { "simrat39/rust-tools.nvim" },
 	{
 		"sphamba/smear-cursor.nvim",
 		opts = {},
