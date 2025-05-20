@@ -30,14 +30,19 @@ function 10n() { local count=10; while (( count-- > 0 )); do zle vi-backward-cha
 function 10e() { local count=10; while (( count-- > 0 )); do zle down-line-or-history   ;done }
 function 10i() { local count=10; while (( count-- > 0 )); do zle up-line-or-history     ;done }
 function 10o() { local count=10; while (( count-- > 0 )); do zle vi-forward-char        ;done }
+function capacity() {
+    x=$(cat /sys/class/power_supply/BAT0/capacity)
+    x=$((x * 81 / 100))
+    dec2btri $x 5
+}
 function push_system() {
     (cd && git switch sol && git pull && git merge mut && git push -u gitee sol && git push -u github sol && git switch mut)
 }
 # gl: git log
 function gl() {
-    (cd && git log --graph --oneline --decorate --color > .git.log)
+    git log --graph --oneline --decorate --color > ~/.log
     echo ""
-    cat .git.log
+    cat ~/.log
 }
 # px: proxy
 function px() {

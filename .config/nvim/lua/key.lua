@@ -4,8 +4,6 @@ vim.keymap.set('', '<leader>q', ':q!<CR>')
 vim.keymap.set('', '<leader>w', ':w<CR>')
 vim.keymap.set('', '<leader>f', ':wq<CR>')
 vim.keymap.set('', '<leader>z', ':CellularAutomaton make_it_rain<CR>')
-vim.keymap.set('', '<leader>x', ':CellularAutomaton scramble<CR>')
-vim.keymap.set('', '<leader>c', ':CellularAutomaton game_of_life<CR>')
 
 vim.keymap.set('', '<leader>j', ':nohl<CR>')
 vim.keymap.set('', 'n', 'h')

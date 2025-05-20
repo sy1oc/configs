@@ -25,11 +25,14 @@ xbacklight -set 50
 
 while xsetroot -name " `timedatectl | awk 'NR == 1 {
     print $4, $3, $5
-}'` | `cat /sys/class/power_supply/BAT0/capacity`% "
+}'` `
+    now=$(cat /sys/class/power_supply/BAT0/charge_now)
+    full=$(cat /sys/class/power_supply/BAT0/charge_full)
+    cap=$(((now * 242 / full) - 121))
+    dec2btri $cap 5` "
 do
     sleep1
 done &
-
 
 cd ~
 picom &
