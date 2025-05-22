@@ -29,18 +29,18 @@ static const char col_cyan[]        = "#89B4FA";    // catppuccin blue
 
 - tagging
 ```c
-static const char *tags[] = { "[", "][", "|[", "[[", "]][", "|][", "[][", "]|[", "||[" };
+static const char *tags[] = { "*]]", "*-]", "*[]", "*]", "*", "*[", "*][", "*|[", "*[[" };
 ```
 
 - layout
 ```c
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[T]",      centeredmaster },
-	{ "[F]",      centeredfloatingmaster },
-	{ "[T]",      tile },    /* first entry is default */
-	{ "[F]",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ "T",      centeredmaster },
+	{ "F",      centeredfloatingmaster },
+	{ "T",      tile },    /* first entry is default */
+	{ "F",      NULL },    /* no layout function means floating behavior */
+	{ "M",      monocle },
 };
 ```
 
