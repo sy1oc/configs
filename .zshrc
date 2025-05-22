@@ -31,7 +31,7 @@ function 10e() { local count=10; while (( count-- > 0 )); do zle down-line-or-hi
 function 10i() { local count=10; while (( count-- > 0 )); do zle up-line-or-history     ;done }
 function 10o() { local count=10; while (( count-- > 0 )); do zle vi-forward-char        ;done }
 function push_system() {
-    (cd && git switch lcm && git pull && git merge mut && git push -u gitee lcm && git push -u github lcm && git switch mut)
+    (cd && git switch lcm && git pull && git merge mut@configs && git push -u gitee lcm && git push -u github lcm && git switch mut@configs)
 }
 # gl: git log
 function gl() {
