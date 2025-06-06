@@ -32,8 +32,17 @@ return {
         'windwp/nvim-autopairs',
         event = 'InsertEnter',
     },
-    { 'sphamba/smear-cursor.nvim',
-        opts = {}, 
+    { 
+        'sphamba/smear-cursor.nvim',
+        opts = {},
     },
-    { 'eandrju/cellular-automaton.nvim', },
+    {  
+        'eandrju/cellular-automaton.nvim',
+    },
+    {
+        "zeioth/garbage-day.nvim",
+        dependencies = "neovim/nvim-lspconfig",
+        event = "VeryLazy",
+        opts = {},
+    },
 }

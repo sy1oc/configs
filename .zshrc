@@ -13,7 +13,7 @@ export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 export EDITOR=nvim
-export KEYTIMEOUT=.1
+export KEYTIMEOUT=1
 
 autoload -Uz vcs_info
 precmd() { vcs_info }
@@ -30,13 +30,11 @@ function 10n() { local count=10; while (( count-- > 0 )); do zle vi-backward-cha
 function 10e() { local count=10; while (( count-- > 0 )); do zle down-line-or-history   ;done }
 function 10i() { local count=10; while (( count-- > 0 )); do zle up-line-or-history     ;done }
 function 10o() { local count=10; while (( count-- > 0 )); do zle vi-forward-char        ;done }
-function capacity() {
-    x=$(cat /sys/class/power_supply/BAT0/capacity)
-    x=$((x * 81 / 100))
-    dec2btri $x 5
+function bonsai() {
+    while true ; do cbonsai -l -t 1; done
 }
 function push_system() {
-    (cd && git switch sol && git pull && git merge mut && git push -u gitee sol && git push -u github sol && git switch mut)
+    (cd && git switch sol && git pull && git merge mut@configs && git push -u gitee sol && git push -u github sol && git switch mut@configs)
 }
 # gl: git log
 function gl() {
@@ -60,7 +58,8 @@ function dpx() {
 # asd: the left most 3 key in the mid keyboard row under qwerty layout
 function asd() {
     setxkbmap us -v colemak && xset r 66
-    xinput --set-prop 11 327 0
+    #xinput --set-prop 11 327 0
+    xinput --set-prop 16 328 0 1 0
     xinput --set-prop 11 330 0 1 0
 }
 # wp: wallpaper

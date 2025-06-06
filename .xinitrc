@@ -19,7 +19,8 @@ xrandr --output eDP1 --mode 1600x1200 --set "scaling mode" "Full"
 
 # "xset r 66" for caps behaviour
 setxkbmap us -v colemak && xset r 66
-xinput --set-prop 11 327 0
+#xinput --set-prop 11 327 0
+xinput --set-prop 16 328 0 1 0
 xinput --set-prop 11 330 0 1 0
 xbacklight -set 50
 
