@@ -20,7 +20,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "[", "][", "|[", "[[", "]][", "|][", "[][", "]|[", "||[" };
+static const char *tags[] = { "*]]", "*-]", "*[]", "*]", "*", "*[", "*][", "*|[", "*[[" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -40,11 +40,11 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[T]",      centeredmaster },
-	{ "[F]",      centeredfloatingmaster },
-	{ "[T]",      tile },    /* first entry is default */
-	{ "[F]",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ "T",      centeredmaster },
+	{ "F",      centeredfloatingmaster },
+	{ "T",      tile },    /* first entry is default */
+	{ "F",      NULL },    /* no layout function means floating behavior */
+	{ "M",      monocle },
 };
 
 /* key definitions */

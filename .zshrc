@@ -31,13 +31,13 @@ function 10e() { local count=10; while (( count-- > 0 )); do zle down-line-or-hi
 function 10i() { local count=10; while (( count-- > 0 )); do zle up-line-or-history     ;done }
 function 10o() { local count=10; while (( count-- > 0 )); do zle vi-forward-char        ;done }
 function push_system() {
-    (cd && git switch lcm && git pull && git merge mut && git push -u gitee lcm && git push -u github lcm && git switch mut)
+    (cd && git switch lcm && git pull && git merge mut@configs && git push -u gitee lcm && git push -u github lcm && git switch mut@configs)
 }
 # gl: git log
 function gl() {
-    (cd && git log --graph --oneline --decorate --color > .git.log)
+    (git log --graph --oneline --decorate --color > ~/.o)
     echo ""
-    cat .git.log
+    cat ~/.o
 }
 # px: proxy
 function px() {
@@ -55,8 +55,9 @@ function dpx() {
 # asd: the left most 3 key in the mid keyboard row under qwerty layout
 function asd() {
     setxkbmap us -v colemak && xset r 66
-    xinput --set-prop 10 325 0
+    xinput --set-prop 9 328 0 1 0
     xinput --set-prop 10 328 0 1 0
+    xinput --set-prop 11 328 0 1 0
     pactl set-default-sink alsa_output.pci-0000_0c_00.6.analog-stereo
     pactl set-default-source alsa_input.pci-0000_0c_00.6.analog-stereo
     dmenu_path > /dev/null
@@ -127,4 +128,4 @@ alias pm='pacman'
 alias v='nvim'
 alias shut='shutdown now'
 alias s='sudo '
-alias nf='neofetch'
+alias ff='fastfetch'

@@ -3,8 +3,9 @@ xrandr --addmode HDMI-2 1440x1080
 xrandr --output HDMI-2 --mode 1440x1080 
 
 setxkbmap us -v colemak && xset r 66
-xinput --set-prop 10 325 0
+xinput --set-prop 9 328 0 1 0
 xinput --set-prop 10 328 0 1 0
+xinput --set-prop 11 328 0 1 0
 pactl set-default-sink alsa_output.pci-0000_0c_00.6.analog-stereo
 pactl set-default-source alsa_input.pci-0000_0c_00.6.analog-stereo
 dmenu_path > /dev/null
