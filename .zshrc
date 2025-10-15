@@ -14,6 +14,7 @@ export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 export EDITOR=nvim
 export KEYTIMEOUT=1
+export RANGER_LOAD_DEFAULT_RC=FALSE
 
 autoload -Uz vcs_info
 precmd() { vcs_info }
@@ -47,20 +48,23 @@ function px() {
     sudo systemctl start clash
     export http_proxy=http://127.0.0.1:7890
     export https_proxy=https://127.0.0.1:7890
-    echo -e "proxy on"
+    echo -e "http_proxy\t:= \t"$http_proxy
+    echo -e "https_proxy\t:= \t"$https_proxy
 }
 # dpx: de-proxy
 function dpx() {
     sudo systemctl stop clash
     unset http_proxy https_proxy
-    echo -e "proxy off"
+    echo -e "http_proxy\t:= \t"$http_proxy
+    echo -e "https_proxy\t:= \t"$https_proxy
 }
 # asd: the left most 3 key in the mid keyboard row under qwerty layout
 function asd() {
     setxkbmap us -v colemak && xset r 66
     #xinput --set-prop 11 327 0
-    xinput --set-prop 16 328 0 1 0
+    #xinput --set-prop 16 328 0 1 0
     xinput --set-prop 11 330 0 1 0
+    xinput --set-prop 13 330 0 1 0
 }
 # wp: wallpaper
 function wp() {
