@@ -8,7 +8,7 @@ autoload -Uz compinit
 compinit
 autoload edit-command-line
 
-export PATH="/home/sy1oc/.cargo/bin:$PATH"
+#export PATH="/home/sy1oc/.cargo/bin:$PATH"
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
@@ -64,7 +64,9 @@ function asd() {
     #xinput --set-prop 11 327 0
     #xinput --set-prop 16 328 0 1 0
     xinput --set-prop 11 330 0 1 0
+    xinput --set-prop 11 352 0 1 0
     xinput --set-prop 13 330 0 1 0
+    xinput --set-prop 11 350 0 1 0
 }
 # wp: wallpaper
 function wp() {
@@ -133,3 +135,5 @@ alias v='nvim'
 alias shut='shutdown now'
 alias s='sudo '
 alias ff='fastfetch'
+
+#dprint "Hello Pyjast++" 
