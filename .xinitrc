@@ -9,9 +9,9 @@ xrandr --addmode eDP-1-1 1280x960_60.00
 xrandr --addmode eDP-1-1 1440x1080_60.00
 xrandr --addmode eDP-1-1 1600x1200_60.00
 
-xrandr --output eDP-1-1 --mode 1280x960_60.00 --set "scaling mode" "Full"
+#xrandr --output eDP-1-1 --mode 1280x960_60.00 --set "scaling mode" "Full"
 #xrandr --output eDP-1-1 --mode 1440x1080_60.00 --set "scaling mode" "Full"
-#xrandr --output eDP-1-1 --mode 1600x1200_60.00 --set "scaling mode" "Full"
+xrandr --output eDP-1-1 --mode 1600x1200_60.00 --set "scaling mode" "Full"
 
 #xrandr --newmode "1280x960"  101.25  1280 1360 1488 1696  960 963 967 996 -hsync +vsync
 #xrandr --newmode "1440x1080"  129.00  1440 1528 1680 1920  1080 1083 1087 1120 -hsync +vsync
