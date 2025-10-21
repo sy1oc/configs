@@ -1,6 +1,5 @@
 return {
-	{
-		"catppuccin/nvim",
+	{	"catppuccin/nvim",
 		name = "catppuccin",
 		priority = 1000,
 	},
@@ -48,29 +47,15 @@ return {
 		main = "ibl",
 		opts = {},
 	},
-	{
-		"windwp/nvim-autopairs",
-		event = "InsertEnter",
-	},
-	{
-		"sphamba/smear-cursor.nvim",
-		opts = {},
-	},
-	{
-		"eandrju/cellular-automaton.nvim",
-	},
-	{
-		"zeioth/garbage-day.nvim",
-		dependencies = "neovim/nvim-lspconfig",
-		event = "VeryLazy",
-		opts = {},
-	},
-	{
-		"mason-org/mason.nvim",
-		opts = {},
-	},
+	{ "windwp/nvim-autopairs", event = "InsertEnter" },
+	{ "sphamba/smear-cursor.nvim", opts = {} },
+	{ "eandrju/cellular-automaton.nvim" },
+	{ "zeioth/garbage-day.nvim", dependencies = "neovim/nvim-lspconfig", event = "VeryLazy", opts = {} },
+	{ "mason-org/mason.nvim", opts = {} },
 	--{
 	--	"rcarriga/nvim-dap-ui",
 	--	dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" }
 	--},
+	{ "nvim-tree/nvim-tree.lua", opts = {} },
+	{ "akinsho/bufferline.nvim", opts = {} },
 }

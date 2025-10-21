@@ -30,3 +30,7 @@ vim.o.showmatch = true
 vim.wo.cursorline = false
 vim.wo.wrap = true
 vim.wo.linebreak = true
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+vim.opt.termguicolors = true

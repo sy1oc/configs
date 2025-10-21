@@ -1,10 +1,27 @@
-require('key')
-require('opt')
+require("key")
+require("opt")
 
-require('configs.lazy')
-require('configs.cat')
-require('configs.file')
+require("configs.lazy")
+require("configs.cat")
+require("configs.file")
 
-require('lualine').setup({})
-require('nvim-autopairs').setup()
+require("lualine").setup({})
+require("nvim-autopairs").setup()
 
+-- require("nvim-tree").setup()
+
+-- OR setup with some options
+--require("nvim-tree").setup({
+--	sort = {
+--		sorter = "case_sensitive",
+--	},
+--	view = {
+--		width = 30,
+--	},
+--	renderer = {
+--		group_empty = true,
+--	},
+--	filters = {
+--		dotfiles = true,
+--	},
+--})
