@@ -136,4 +136,4 @@ alias shut='shutdown now'
 alias s='sudo '
 alias ff='fastfetch'
 
-#dprint "Hello Pyjast++" 
+dprint "Welcome, sy1oc @ Sol" .25

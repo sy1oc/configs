@@ -3,11 +3,13 @@ return {
 	opts = {
 		formatters_by_ft = {
 			lua = { "stylua" },
-			rust = { "rustfmt", lsp_format = "rust_analyzer" },
+			rust = { "rustfmt"},
 			latex = { "latexindent" },
+			cpp = { "clang-format" },
+			c = { "clang-format" },
 		},
 
-		vim.keymap. set({ "n" }, "<leader>p", function()
+		vim.keymap.set({ "n" }, "<leader>p", function()
 			require("conform").format({
 				lsp_fallback = true,
 				async = false,

@@ -1,0 +1,14 @@
+return {
+	"eandrju/cellular-automaton.nvim",
+	opt = {
+		vim.api.nvim_create_autocmd("BufRead", {
+			pattern = { ".*rc" },
+			callback = function()
+				vim.bo.filetype = "sh"
+			end,
+		}),
+	},
+}
+
+-- Ghost chars, could be tabs, introduced by formatters would destroy the effect of this plugin.
+-- Thus, I decided to stop using this plugin.
