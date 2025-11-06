@@ -8,7 +8,7 @@ return {
 			{ "ms-jpq/coq.thirdparty", branch = "3p" },
 		},
 		init = function()
-			vim.g.coq_settings = { auto_start = true }
+			vim.g.coq_settings = { auto_start = "shut-up" }
 		end,
 		config = function()
 			vim.diagnostic.config({ virtual_text = true })
@@ -17,6 +17,7 @@ return {
 			vim.lsp.enable("clangd")
 			vim.lsp.enable("texlab")
 			vim.lsp.enable("jdtls")
+			vim.lsp.enable("tinymist")
 		end,
 	},
 	{

@@ -31,6 +31,7 @@ xrandr --output eDP-1-1 --mode 1600x1200_60.00 --set "scaling mode" "Full"
 #xrandr --output eDP1 --mode 1280x720 --set "scaling mode" "Full"
 #xrandr --output eDP1 --mode 1600x900 --set "scaling mode" "Full"
 
+xinput disable 13
 # "xset r 66" for caps behaviour
 setxkbmap us -v colemak && xset r 66
 #xinput --set-prop 11 327 0
@@ -38,6 +39,7 @@ xinput --set-prop 16 328 0 1 0
 xinput --set-prop 11 330 0 1 0
 xinput --set-prop 11 352 0 1 0
 xinput --set-prop 11 350 0 1 0
+xinput --set-prop 14 353 0 1 0
 xbacklight -set 50
 
 while xsetroot -name " `timedatectl | awk 'NR == 1 {

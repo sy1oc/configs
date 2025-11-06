@@ -7,6 +7,7 @@ return {
 			latex = { "latexindent" },
 			cpp = { "clang-format" },
 			c = { "clang-format" },
+			typst = { "typstyle" },
 		},
 
 		vim.keymap.set({ "n" }, "<leader>p", function()
