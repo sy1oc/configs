@@ -99,6 +99,12 @@ function vi-operator-swapped {
     zle ".$WIDGET"
 }
 
+function q() {
+    three=$(die 3)
+    three=$((three - 2))
+    dec2btri $three
+}
+
 zle -N 10n
 zle -N 10e
 zle -N 10i
@@ -130,7 +136,7 @@ bindkey -M vicmd 'c' vi-change
 bindkey -M vicmd 'q' edit-command-line
 
 alias l='ls --color=auto '
-alias ll='l -al '
+alias ll='l -alh'
 alias grep='grep --color=auto '
 alias pm='pacman'
 alias v='nvim'
