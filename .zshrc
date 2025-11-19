@@ -61,6 +61,7 @@ function dpx() {
 # asd: the left most 3 key in the mid keyboard row under qwerty layout
 function asd() {
     xinput disable 13
+    xinput disable 15
     setxkbmap us -v colemak && xset r 66
     #xinput --set-prop 11 327 0
     #xinput --set-prop 16 328 0 1 0
