@@ -28,6 +28,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
-vim.cmd.colorscheme("catppuccin")
-vim.cmd.colorscheme("ferriouscolor")
-vim.cmd.colorscheme("oxocarbon")
+--vim.cmd.colorscheme("ferriouscolor")
+--vim.cmd.colorscheme("catppuccin")
+--vim.cmd.colorscheme("oxocarbon")
+vim.cmd.colorscheme("tokyonight")

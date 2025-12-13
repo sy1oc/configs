@@ -1,0 +1,28 @@
+return {
+	{
+		"karb94/neoscroll.nvim",
+		opts = {
+			hide_cursor = false, -- Hide cursor while scrolling
+			easing = "quadratic", -- Default easing function
+		},
+		--init = function()
+		--	local neoscroll = require("neoscroll")
+		--	local keymap = {
+		--		["<S-e>"] = function()
+		--			neoscroll.ctrl_d({ duration = 100 })
+		--		end,
+		--		["<S-i>"] = function()
+		--			neoscroll.ctrl_u({ duration = 100 })
+		--		end,
+		--		["<S-z>"] = function()
+		--			neoscroll.zz({ half_win_duration = 100 })
+		--		end,
+		--	}
+		--	local modes = { "n", "v", "x" }
+		--	for key, func in pairs(keymap) do
+		--		vim.keymap.set(modes, key, func, { noremap = true, silent = true })
+		--	end
+		--end,
+	},
+
+}

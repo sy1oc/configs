@@ -137,12 +137,13 @@ bindkey -M vicmd 'c' vi-change
 bindkey -M vicmd 'q' edit-command-line
 
 alias l='ls --color=auto '
-alias ll='l -alh'
+alias ll='l -Alh'
 alias grep='grep --color=auto '
 alias pm='pacman'
 alias v='nvim'
 alias shut='shutdown now'
 alias s='sudo '
 alias ff='fastfetch'
+alias vv='v .'
 
 dprint "Welcome, sy1oc @ Sol" .25
