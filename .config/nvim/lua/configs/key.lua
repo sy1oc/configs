@@ -14,8 +14,7 @@ vim.keymap.set("", "o", "l")
 vim.keymap.set("", "h", "i")
 vim.keymap.set("", "k", "ezz")
 vim.keymap.set("", "j", "nzz")
-vim.keymap.set("", "l", "o<Esc>zzcc")
-
+vim.keymap.set("", "l", "o")
 
 vim.keymap.set("", "N", "25h")
 vim.keymap.set("", "E", "25jzz")
@@ -24,8 +23,7 @@ vim.keymap.set("", "O", "25l")
 vim.keymap.set("", "H", "I")
 vim.keymap.set("", "K", "Ezz")
 vim.keymap.set("", "J", "Nzz")
-vim.keymap.set("", "L", "O<Esc>zzcc")
-
+vim.keymap.set("", "L", "O")
 
 vim.keymap.set("", "w", "wzz")
 vim.keymap.set("", "b", "bzz")

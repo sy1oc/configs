@@ -106,6 +106,18 @@ function q() {
     dec2btri $three
 }
 
+function dk() {
+    xrandr --output eDP-1-1 --brightness 0.50
+}
+
+function dkk() {
+    xrandr --output eDP-1-1 --brightness 0.25
+}
+
+function bt() {
+    xrandr --output eDP-1-1 --brightness 1
+}
+
 zle -N 10n
 zle -N 10e
 zle -N 10i

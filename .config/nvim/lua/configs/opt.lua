@@ -31,4 +31,4 @@ vim.opt.termguicolors = true
 --vim.cmd.colorscheme("ferriouscolor")
 --vim.cmd.colorscheme("catppuccin")
 --vim.cmd.colorscheme("oxocarbon")
-vim.cmd.colorscheme("tokyonight")
+vim.cmd.colorscheme("tokyonight-moon")

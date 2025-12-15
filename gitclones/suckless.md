@@ -86,7 +86,7 @@ static const Key keys[] = {
 };
 ```
 
-## St
+## St (deprecated now, I use Kitty with tokyonight-moon)
 
 - [alpha](https://st.suckless.org/patches/alpha/)
 ```c

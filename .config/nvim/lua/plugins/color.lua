@@ -97,7 +97,12 @@ return {
 		lazy = false,
 		priority = 1000,
 		opts = {
-			transparent = true, -- Boolean: Sets the background to transparent
+			transparent = true,
+			on_highlights = function(hl, c)
+				hl.LineNr = { fg = "#F7768E", bold = true }
+				hl.LineNrAbove = { fg = "#C0CAF5" }
+				hl.LineNrBelow = { fg = "#C0CAF5" }
+			end,
 		},
 	},
 }
