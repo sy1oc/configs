@@ -21,6 +21,8 @@
 .config/nvim/lazy-lock.json
 !.config/zsh/
 !.config/zsh/**
+!.config/hypr/
+!.config/hypr/**
 
 !.cargo/bin/
 !.cargo/bin/**

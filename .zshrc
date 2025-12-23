@@ -9,6 +9,7 @@ compinit
 autoload edit-command-line
 
 #export PATH="/home/sy1oc/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
@@ -71,10 +72,16 @@ function asd() {
     xinput --set-prop 11 350 0 1 0
     xinput --set-prop 14 353 0 1 0
 }
-# wp: wallpaper
-function wp() {
-    feh --bg-max --randomize ~/.wallpapers/* &
-}
+#function wp() {
+##    feh --bg-max --randomize ~/.wallpapers/* &
+#    WALL_DIR="$HOME/.wallpapers/"
+#    
+#    pic="$(find "$WALL_DIR" -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' \) | shuf -n 1)" || exit 0
+#    [ -z "$pic" ] && exit 0
+#    
+#    pkill swaybg 2>/dev/null
+#    swaybg -m fill -i "$pic" &
+#}
 function zle-line-init {
     zle -K viins
     echo -ne "\033[6 q"   
@@ -107,15 +114,17 @@ function q() {
 }
 
 function dk() {
-    xrandr --output eDP-1-1 --brightness 0.50
-}
-
-function dkk() {
-    xrandr --output eDP-1-1 --brightness 0.25
-}
-
-function bt() {
-    xrandr --output eDP-1-1 --brightness 1
+    #xrandr --output eDP-1-1 --brightness 1 #cmd for x11
+    #brightnessctl -d intel_backlight set 12000
+    val=1
+    if [[ -n "$1" && "$1" =~ ^[0-9]*\.?[0-9]+$ ]]; then
+        if (( $(printf '%.6f <= 1.0\n' "$1" | awk '{print ($1<=1.0)}') )) && \
+           (( $(printf '%.6f >= 0.0\n' "$1" | awk '{print ($1>=0.0)}') )); then
+            val="$1"
+        fi
+    fi
+    brightness=$(( val * 12000 ))
+    brightnessctl -d intel_backlight set "${brightness}"
 }
 
 zle -N 10n

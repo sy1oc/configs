@@ -55,6 +55,6 @@ do
 done &
 
 cd ~
-picom &
+#picom &
 feh --bg-max --randomize ~/.wallpapers/* &
 exec dwm
