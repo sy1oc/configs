@@ -23,6 +23,10 @@
 !.config/zsh/**
 !.config/hypr/
 !.config/hypr/**
+!.config/waybar/
+!.config/waybar/**
+!.config/wofi/
+!.config/wofi/**
 
 !.cargo/bin/
 !.cargo/bin/**
