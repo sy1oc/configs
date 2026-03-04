@@ -166,5 +166,6 @@ alias shut='shutdown now'
 alias s='sudo '
 alias ff='fastfetch'
 alias vv='v .'
+alias g='git'
 
 dprint "Welcome, sy1oc @ Sol" .25
