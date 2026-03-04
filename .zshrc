@@ -35,8 +35,13 @@ function 10o() { local count=10; while (( count-- > 0 )); do zle vi-forward-char
 function bonsai() {
     while true ; do cbonsai -l -t 1; done
 }
-function push_system() {
+
+function push() {
     (cd && git switch sol && git pull && git merge mut@configs && git push -u gitee sol && git push -u github sol && git switch mut@configs)
+}
+
+function Syu() {
+    (sudo pacman -Syu && yay -Syu)
 }
 # gl: git log
 function gl() {
