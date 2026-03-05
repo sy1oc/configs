@@ -36,12 +36,16 @@ function bonsai() {
     while true ; do cbonsai -l -t 1; done
 }
 
+function tttt() {
+    (asd)
+}
+
 function push() {
     (cd && git switch sol && git pull && git merge mut@configs && git push -u gitee sol && git push -u github sol && git switch mut@configs)
 }
 
 function Syu() {
-    (sudo pacman -Syu && yay -Syu)
+    (sudo pacman -Syu && yay -Syu && setxkbmap us -v colemak && xset r 66)
 }
 # gl: git log
 function gl() {

@@ -7,11 +7,9 @@
 !clouds/
 !clouds/**
 
-!.wallpapers/
-!.wallpapers/**
-
 !.xinitrc
 !.zshrc
+!.zprofile
 
 !.config/
 !.config/picom/
