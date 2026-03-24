@@ -1,0 +1,5 @@
+#!/bin/zsh
+dir_wallpapers=~/.wallpapers
+for f in "$dir_wallpapers"/*.png(N); do
+  mv -- "$f" "$dir_wallpapers/photo_$(date +%s%N | sha256sum | cut -c1-8).png"
+done
