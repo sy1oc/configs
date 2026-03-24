@@ -35,17 +35,12 @@ function 10o() { local count=10; while (( count-- > 0 )); do zle vi-forward-char
 function bonsai() {
     while true ; do cbonsai -l -t 1; done
 }
-
-function tttt() {
-    (asd)
-}
-
 function push() {
     (cd && git switch sol && git pull && git merge mut@configs && git push -u gitee sol && git push -u github sol && git switch mut@configs)
 }
-
 function Syu() {
-    (sudo pacman -Syu && yay -Syu && setxkbmap us -v colemak && xset r 66)
+    (sudo pacman -Rns $(pacman -Qdtq) && yay -Yc)
+    (sudo pacman -Syu && yay -Syu)
 }
 # gl: git log
 function gl() {
@@ -68,19 +63,18 @@ function dpx() {
     echo -e "http_proxy\t:= \t"$http_proxy
     echo -e "https_proxy\t:= \t"$https_proxy
 }
-# asd: the left most 3 key in the mid keyboard row under qwerty layout
-function asd() {
-    xinput disable 13
-    xinput disable 15
-    setxkbmap us -v colemak && xset r 66
-    #xinput --set-prop 11 327 0
-    #xinput --set-prop 16 328 0 1 0
-    xinput --set-prop 11 330 0 1 0
-    xinput --set-prop 11 352 0 1 0
-    xinput --set-prop 13 330 0 1 0
-    xinput --set-prop 11 350 0 1 0
-    xinput --set-prop 14 353 0 1 0
-}
+#function asd() {
+#    xinput disable 13
+#    xinput disable 15
+#    setxkbmap us -v colemak && xset r 66
+#    #xinput --set-prop 11 327 0
+#    #xinput --set-prop 16 328 0 1 0
+#    xinput --set-prop 11 330 0 1 0
+#    xinput --set-prop 11 352 0 1 0
+#    xinput --set-prop 13 330 0 1 0
+#    xinput --set-prop 11 350 0 1 0
+#    xinput --set-prop 14 353 0 1 0
+#}
 #function wp() {
 ##    feh --bg-max --randomize ~/.wallpapers/* &
 #    WALL_DIR="$HOME/.wallpapers/"
@@ -177,4 +171,6 @@ alias ff='fastfetch'
 alias vv='v .'
 alias g='git'
 
-dprint "Welcome, sy1oc @ Sol" .25
+#dprint "Welcome, sy1oc @ Sol" .25
+export PATH="$HOME/.npm-global/bin:$PATH"
+source /usr/share/nvm/init-nvm.sh
